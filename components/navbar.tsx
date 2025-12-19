@@ -34,8 +34,8 @@ export function Navbar({ isAdmin }: NavbarProps) {
   ];
 
   return (
-    <nav className="fixed bottom-0 left-0 right-0 bg-transparent border-border z-50">
-      <div className="flex justify-around items-center h-20 max-w-md mx-auto">
+    <nav className="fixed bottom-0 left-0 right-0 bg-neve lg:bg-transparent border-border z-50">
+      <div className="flex justify-around items-center h-16 max-w-md mx-auto">
         {navItems
           .filter((item) => item.show)
           .map((item) => {
@@ -47,14 +47,14 @@ export function Navbar({ isAdmin }: NavbarProps) {
                 key={item.href}
                 href={item.href}
                 className={cn(
-                  "flex flex-col items-center justify-center px-4 py-2 rounded-lg transition-colors",
+                  "flex flex-col items-center justify-center px-4 py-2 transition-colors",
                   isActive
-                    ? "text-primary bg-secondary"
-                    : "text-muted-foreground hover:text-primary hover:bg-secondary/50"
+                    ? "text-navy"
+                    : "text-muted-foreground hover:text-navy"
                 )}
               >
-                <Icon className="h-6 w-6" fontWeight="bold" />
-                <span className="text-xs font-black mt-2">{item.label}</span>
+                <Icon className={cn("h-6 w-6", isActive && "stroke-[2.5]")} />
+                <span className={cn("text-xs mt-1", isActive ? "font-bold" : "font-medium")}>{item.label}</span>
               </Link>
             );
           })}

@@ -79,9 +79,9 @@ export default async function HomePage() {
   const isAdmin = user.role === "admin";
 
   return (
-    <div className="min-h-screen bg-beje">
+    <div className="min-h-screen bg-beje flex flex-col">
       <Header user={user} />
-      <main className="pt-28 pb-20 px-24 min-w-7xl mx-auto">
+      <main className="flex-1 pt-20 sm:pt-20 lg:pt-28 pb-0 lg:pb-20 px-0 sm:px-6 md:px-12 lg:px-24 mx-auto w-full flex flex-col">
         <ScheduleCalendar
           schedules={schedules || []}
           users={users || []}

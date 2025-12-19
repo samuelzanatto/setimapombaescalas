@@ -41,7 +41,7 @@ export function Header({ user }: HeaderProps) {
 
   return (
     <header className="fixed top-0 left-0 right-0 bg-transport z-50">
-      <div className="flex items-center justify-between h-20 px-20 mx-auto">
+      <div className="flex items-center justify-between h-20 px-4 sm:px-6 md:px-12 lg:px-20 mx-auto">
         {/* Logo */}
         <div className="flex items-center">
           <Image 

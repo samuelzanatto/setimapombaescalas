@@ -112,6 +112,7 @@
   border: none;
   font-family: inherit;
   transition: height 300ms ease-in-out;
+  padding: 1rem 0;
 }
 
 .custom-calendar .react-calendar__viewContainer {
@@ -127,26 +128,15 @@
 }
 
 .custom-calendar .react-calendar__navigation {
-  display: flex;
-  margin-bottom: 1rem;
+  display: none !important;
 }
 
-.custom-calendar .react-calendar__navigation button {
-  background: transparent;
-  color: #062D49;
-  font-weight: 600;
-  font-size: 1rem;
-  padding: 0.5rem;
-  border-radius: 0.5rem;
-  transition: background-color 0.2s;
+.custom-calendar .react-calendar__navigation__label {
+  display: none !important;
 }
 
-.custom-calendar .react-calendar__navigation button:hover {
-  background: rgba(6, 45, 73, 0.1);
-}
-
-.custom-calendar .react-calendar__navigation button:disabled {
-  opacity: 0.5;
+.custom-calendar .react-calendar__navigation__arrow {
+  display: none !important;
 }
 
 .custom-calendar .react-calendar__month-view__weekdays {
@@ -174,7 +164,7 @@
 .custom-calendar .react-calendar__tile {
   background: transparent;
   border-radius: 0.5rem;
-  padding: 0.8rem;
+  padding: 0.6rem;
   transition: background-color 200ms ease, color 200ms ease;
   display: flex;
   align-items: center;
@@ -247,4 +237,41 @@
 
 .custom-calendar .react-calendar__tile--active.has-schedule abbr::after {
   background: #FFFAFA;
+}
+
+/* Mobile Calendar Styles */
+.mobile-calendar {
+  background: transparent !important;
+  padding: 0.5rem 0 !important;
+}
+
+.mobile-calendar .react-calendar__tile {
+  padding: 0.4rem;
+}
+
+.mobile-calendar .react-calendar__tile abbr {
+  width: 36px !important;
+  height: 36px !important;
+  min-width: 36px;
+  max-width: 36px;
+  border-radius: 0.5rem;
+  font-size: 0.8rem;
+}
+
+@media (min-width: 380px) {
+  .mobile-calendar .react-calendar__tile abbr {
+    width: 40px !important;
+    height: 40px !important;
+    min-width: 40px;
+    max-width: 40px;
+  }
+}
+
+@media (min-width: 420px) {
+  .mobile-calendar .react-calendar__tile abbr {
+    width: 44px !important;
+    height: 44px !important;
+    min-width: 44px;
+    max-width: 44px;
+  }
 }
